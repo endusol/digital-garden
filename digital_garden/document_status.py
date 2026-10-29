@@ -1,9 +1,9 @@
-"""Allowed by the contract document statuses."""
+"""Allowed document maturity statuses/stages."""
 import enum
 
 
 class DocumentStatus(enum.StrEnum):
-    """Enum representing the status of the note."""
+    """Enum representing allowed document maturity statuses/stages."""
     SEEDS = 'seeds'
     SPROUT = 'sprout'
     EVERGREEN = 'evergreen'
