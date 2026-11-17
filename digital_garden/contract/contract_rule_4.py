@@ -15,5 +15,6 @@ class ContractRule4(ContractRule):
 
     @classmethod
     def check(cls, document):
-        if not all(cls.REGEX_FIELD.fullmatch(_) for _ in document.frontmatter):
-            raise ContractViolationException(cls.description)
+        invalid_fields = {f for f in document.frontmatter if not cls.REGEX_FIELD.fullmatch(f)}
+        if invalid_fields:
+            raise ContractViolationException(cls.description + f'\nInvalid fields: {", ".join(invalid_fields)}')
