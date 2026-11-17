@@ -12,6 +12,6 @@ class ContractRule1(ContractRule):
         # noinspection not-iterable
         if False \
                 or not 'tags' in document.frontmatter \
-                or not isinstance(document.frontmatter['tags'], list) \
-                or not all(isinstance(_, str) for _ in document.frontmatter['tags']):
+                or not isinstance(document.frontmatter['tags'] or [], list) \
+                or not all(isinstance(_, str) for _ in document.frontmatter['tags'] or []):
             raise ContractViolationException(cls.description)

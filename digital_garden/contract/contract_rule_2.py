@@ -12,6 +12,6 @@ class ContractRule2(ContractRule):
         # noinspection not-iterable
         if False \
                 or 'aliases' not in document.frontmatter \
-                or not isinstance(document.frontmatter['aliases'], list) \
-                or not all(isinstance(_, str) for _ in document.frontmatter['aliases']):
+                or not isinstance(document.frontmatter['aliases'] or [], list) \
+                or not all(isinstance(_, str) for _ in document.frontmatter['aliases'] or []):
             raise ContractViolationException(cls.description)
