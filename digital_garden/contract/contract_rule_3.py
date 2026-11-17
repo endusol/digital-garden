@@ -8,6 +8,7 @@ from digital_garden.exceptions import ContractViolationException
 
 
 class ContractRule3(ContractRule):
+    name = 'frontmatter-status-presence-and-type'
     # noinspection unresolved-references
     description = __doc__.strip()
 

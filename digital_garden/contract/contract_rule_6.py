@@ -4,6 +4,7 @@ from digital_garden.exceptions import ContractViolationException
 
 
 class ContractRule6(ContractRule):
+    name = 'frontmatter-aliases-uniqueness'
     # noinspection unresolved-references
     description = __doc__.strip()
 

@@ -9,9 +9,10 @@ from digital_garden.exceptions import ContractViolationException
 
 
 class ContractRule4(ContractRule):
-    REGEX_FIELD = re.compile(r'^tags|aliases|status|_[a-z0-9_]*$')
+    name = 'frontmatter-technical-fields-name-format'
     # noinspection unresolved-references
     description = __doc__.strip()
+    REGEX_FIELD = re.compile(r'tags|aliases|status|_[a-z0-9_]*')
 
     @classmethod
     def check(cls, document):

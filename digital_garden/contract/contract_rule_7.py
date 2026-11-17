@@ -15,6 +15,7 @@ from digital_garden.exceptions import ContractViolationException
 
 
 class ContractRule7(ContractRule):
+    name = 'all-tags-format'
     # noinspection unresolved-references
     description = __doc__.strip()
     REGEX_ESCAPED_CHAR       = re.compile(r'\\.')
