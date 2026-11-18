@@ -12,7 +12,7 @@ class ZenPrinciple(abc.ABC):
     REGEX_NAME = re.compile(r'[a-z\d-]+')
     REGEX_DESCRIPTION = re.compile(r'(?!\s).+(?<!\s)', re.DOTALL)
 
-    def __init_subclass__(cls, **kwargs: t.Any) -> None:
+    def __init_subclass__(cls, **kwargs) -> None:
         super().__init_subclass__(**kwargs)
         if abc.ABC in cls.__bases__:
             return
