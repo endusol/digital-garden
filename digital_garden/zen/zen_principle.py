@@ -10,7 +10,7 @@ class ZenPrinciple(abc.ABC):
     name: t.ClassVar[str]
     description: t.ClassVar[str]
     REGEX_NAME = re.compile(r'[a-z\d-]+')
-    REGEX_DESCRIPTION = re.compile(r'(?!\s).+(?<!\s)')
+    REGEX_DESCRIPTION = re.compile(r'(?!\s).+(?<!\s)', re.DOTALL)
 
     def __init_subclass__(cls, **kwargs: t.Any) -> None:
         super().__init_subclass__(**kwargs)

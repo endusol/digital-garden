@@ -4,7 +4,7 @@ from digital_garden.exceptions import ContractViolationException
 
 
 class ContractRule1(ContractRule):
-    name = 'fr   ontmatter-tags-presence-and-type'
+    name = 'frontmatter-tags-presence-and-type'
     # noinspection unresolved-references
     description = __doc__.strip()
 

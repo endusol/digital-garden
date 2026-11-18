@@ -11,7 +11,7 @@ class ContractRule(ZenPrinciple, abc.ABC):
     """Abstract base class for a single Digital Garden contract rule."""
 
     def __init_subclass__(cls, **kwargs: t.Any) -> None:
-        super(ZenPrinciple, cls).__init_subclass__(**kwargs)
+        super().__init_subclass__(**kwargs)
         if 'check' not in cls.__dict__ or not isinstance(cls.__dict__['check'], classmethod):
             raise TypeError(f'Class `{cls.__name__}` must define `check` name of type `Callable[[Document], None]`!')
 
