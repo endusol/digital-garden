@@ -3,5 +3,6 @@ from digital_garden.zen.zen_principle import ZenPrinciple
 
 
 class ZenPrinciple1(ZenPrinciple):
+    name = 'document-atomicity'
     # noinspection unresolved-references
     description = __doc__.strip()
